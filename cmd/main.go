@@ -34,22 +34,6 @@ type TResponse struct {
 	Data    interface{} `json:"data,omitempty"`
 }
 
-type DebugTransport struct{}
-
-func (DebugTransport) RoundTrip(r *http.Request) (*http.Response, error) {
-	b, err := httputil.DumpRequestOut(r, false)
-	if err != nil {
-		return nil, err
-	}
-	fmt.Println(string(b))
-	res, err := http.DefaultTransport.RoundTrip(r)
-	if err != nil {
-		return nil, err
-	}
-	modifyResponse(res)
-	return res, nil
-}
-
 // NewProxy takes target host and creates a reverse proxy
 func NewProxy(targetHost string) (*httputil.ReverseProxy, error) {
 	url, err := url.Parse(targetHost)
@@ -67,7 +51,6 @@ func NewProxy(targetHost string) (*httputil.ReverseProxy, error) {
 
 	proxy.ModifyResponse = modifyResponse
 	// proxy.ErrorHandler = errorHandler
-	// proxy.Transport = DebugTransport{}
 	return proxy, nil
 }
 
@@ -86,32 +69,6 @@ func modifyRequest(r *http.Request) {
 		log.Printf("host: %v, path: %v\n", r.URL.Host, r.URL.Path)
 	}
 }
-
-/**
-func errorHandler(w http.ResponseWriter, req *http.Request, err error) {
-	// fmt.Printf("Got error while modifying response: %v \n", err)
-	resp := SResponse{
-		Success: false,
-		Message: err.Error(),
-	}
-	jr, _ := json.Marshal(resp)
-	// w.WriteHeader(http.StatusOK)
-	w.Header().Set("Content-Type", "application/json")
-	w.Write(jr)
-}
-
-func getMessage(req interface{}, code int, b []byte) string {
-	dm := http.StatusText(code)
-	if m, ok := req.(map[string]interface{}); ok {
-		if value, ok := m["message"]; ok {
-			return fmt.Sprintf("%s", value)
-		}
-	}
-	if req == nil && len(b) > 0 {
-		return string(b)
-	}
-	return dm
-}*/
 
 func modifyResponse(r *http.Response) error {
 	b, err := ioutil.ReadAll(r.Body) //Read content
