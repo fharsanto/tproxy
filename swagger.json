@@ -1,0 +1,1928 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Portal API",
+    "version": "1.0",
+    "title": "Portal API",
+    "contact": {
+      "name": "Tilaka Nusa Teknologi",
+      "url": "https://www.tilaka.id",
+      "email": "info@tilaka.id"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    }
+  },
+  "host": "localhost:8081",
+  "tags": [
+    {
+      "name": "API for Tilaka B2B"
+    },
+    {
+      "name": "API for Tilaka B2B Integration"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/v1/b2b/docs/shared": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Document Shared Data",
+        "description": "Returns document shared data",
+        "operationId": "getDocumentSharedData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/certificate/list": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Certificates Data",
+        "description": "Returns certificates data",
+        "operationId": "getCertificatesData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/docs/emailed": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Emailed Document Data",
+        "description": "Returns emailed document data",
+        "operationId": "getEmailedDocumentData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/docs/received": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Received Shared Document Data",
+        "description": "Returns received shared document data",
+        "operationId": "getReceivedDocumentData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/history/signing": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "User's Signing History Data",
+        "description": "Returns user's signing history data",
+        "operationId": "getUserSigningHistoryData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/notification": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Notification Data",
+        "description": "Returns user's notification data",
+        "operationId": "getNotificationData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/certificate/download-active": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Active Certificates Data",
+        "description": "Returns active certificates data",
+        "operationId": "getActiveCertificatesData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/user/profile": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "User Profile Data",
+        "description": "Returns user's profile data",
+        "operationId": "getUserProfileData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/certificate/confirm-registration": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Confirm Certificate Enrollment",
+        "description": "Returns confirmation success/not",
+        "operationId": "refreshValidatedCert",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/dashboard": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Dashboard Data",
+        "description": "Returns dashboard data",
+        "operationId": "getDashboardData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/user/complete-profile": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "User Profile Data",
+        "description": "Returns user's profile data",
+        "operationId": "getCompleteUserProfileData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/user/company-logo": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Company Logo Data",
+        "description": "Returns user's company logo data",
+        "operationId": "getUserCompanyLogoData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/user/signature-image": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "User's Signature Image Data",
+        "description": "Returns user's signature image data",
+        "operationId": "getUserSignatureImageData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/company/active-email": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Active Email Data",
+        "description": "Returns active email data in same company",
+        "operationId": "getActiveEmailForSameCompData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/sign/check-email": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Check Email To Share In Sign Here",
+        "description": "Returns true if email is registered",
+        "operationId": "checkSignHereEmail",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaB2BCheckEmailReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/onesignal": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "OneSignal Data",
+        "description": "Returns OneSignal data",
+        "operationId": "getOneSignalData",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/notification/update-status": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Update Notification Status",
+        "description": "Returns true if update is successful",
+        "operationId": "updateNotificationStatus",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaB2BNotifUpdateReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/integration/add/user": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B Integration"
+        ],
+        "summary": "Add New User",
+        "description": "Returns true if successfully add new user",
+        "operationId": "addRegularUser",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaIntegrateAddUser"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/integration/certificate/registered": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B Integration"
+        ],
+        "summary": "Get Registered Certificate",
+        "description": "Returns true there is registered certificate",
+        "operationId": "getRegisteredCert",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/integration/user/get/default-signature-mfa": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B Integration"
+        ],
+        "summary": "User's Default Signature and MFA",
+        "description": "Returns user's default signature and mfa",
+        "operationId": "getUserDefaultSignatureAndMfa",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/integration/certificate/confirm": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B Integration"
+        ],
+        "summary": "Confirm Certificate Data",
+        "description": "Returns true if successfully add new user",
+        "operationId": "confirmCertificate",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ConfirmCertificateReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/integration/user/set/default-signature": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B Integration"
+        ],
+        "summary": "Change User's Default Signature",
+        "description": "Returns true if successfully change user's signature",
+        "operationId": "setUserDefaultSignature",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaIntegrateSetDefaultSignature"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/integration/user/set/default-mfa": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B Integration"
+        ],
+        "summary": "Change User's Default MFA",
+        "description": "Returns true if successfully change user's MFA",
+        "operationId": "setUserDefaultMfa",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaIntegrateSetDefaultMfa"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/integration/totp": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B Integration"
+        ],
+        "summary": "Get user's TOTP, send to email",
+        "description": "Returns true if successfully get and send TOTP to email",
+        "operationId": "getUserTotp",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/pdf/validate-pdf": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "PDF Validation",
+        "description": "Returns validation report",
+        "operationId": "validatePdf_1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ValidatePdfReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/signing/sign-here": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "PDF Signing With Sign Here",
+        "description": "Returns signed Pdf workflow",
+        "operationId": "tilakaSigningSignHere",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaB2BSigningPdfWflow"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/pdf/download-signhere/receiver/{workflowId}": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Sign Here PDF Document",
+        "description": "Returns sign here pdf document",
+        "operationId": "getSignHereDocReceivedFromMongodb",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/pdf/qrcontent": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Get QR-Content for PDF-Signing",
+        "description": "Returns QR Content for signing",
+        "operationId": "getQrContent",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/signing/sign-pdf": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "PDF Signing",
+        "description": "Returns signed Pdf",
+        "operationId": "tilakaSigning",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaB2BSigningPdf"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/pdf/download-shared/{sharingId}": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Shared PDF Document",
+        "description": "Returns shared pdf document",
+        "operationId": "getSharedDocFromMongodb",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "sharingId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/pdf/share-to-sign": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Sharing PDF to Sign",
+        "description": "Returns success sharing/not",
+        "operationId": "shareDocToSign",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaB2bShareDocReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/integration/pdf/validate-pdf": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "PDF Validation",
+        "description": "Returns validation report",
+        "operationId": "validatePdf_2",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ValidatePdfReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/integration/signing/download-signmultiple/receiver/{workflowId}": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Sign Here PDF Document",
+        "description": "Returns sign here pdf document",
+        "operationId": "getSignHereDocReceivedFromMongodb_1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "workflowId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/integration/pdf/qrcontent": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Get QR-Content for PDF-Signing",
+        "description": "Returns QR Content for signing",
+        "operationId": "getQrContent_1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/integration/signing/sign-pdf": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "PDF Signing",
+        "description": "Returns signed Pdf",
+        "operationId": "tilakaSigning_1",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaIntegrateSignPdf"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/integration/signing/sign-pdf-multiple": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "PDF Signing With Multiple Signee",
+        "description": "Returns signed Pdf workflow",
+        "operationId": "tilakaSigningMultiple",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaIntegrateSigningPdfMultiple"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/integration/signing/dummy-post": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Receive signing result",
+        "description": "Post request to receive signing result",
+        "operationId": "receivePdfResult",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/TilakaIntegrateCallback"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        }
+      }
+    },
+    "/v1/b2b/totp/get-key": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Totp Create Key",
+        "description": "Returns totp data",
+        "operationId": "getDashboardData_1",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/totp/register-key": {
+      "post": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Totp Register Key",
+        "description": "Returns totp registration",
+        "operationId": "registerTotp",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RegisterVerifyTotpReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    },
+    "/v1/b2b/totp/check-active": {
+      "get": {
+        "tags": [
+          "API for Tilaka B2B"
+        ],
+        "summary": "Check If Totp Active Or Not",
+        "description": "Returns status of totp(active or not)",
+        "operationId": "isTotpActive",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "{success:true,message:,data:[docSigned:10,etc]}",
+            "schema": {
+              "$ref": "#/definitions/GenericRespV1"
+            }
+          }
+        },
+        "security": [
+          {
+            "oauth2": [
+              "email"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "oauth2": {
+      "description": "",
+      "type": "oauth2",
+      "tokenUrl": "https://dev-api.tilaka.id/token",
+      "flow": "password",
+      "scopes": {
+        "email": "email"
+      }
+    }
+  },
+  "definitions": {
+    "GenericRespV1": {
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "ValidatePdfReq": {
+      "type": "object",
+      "properties": {
+        "filepdf_base64": {
+          "type": "string"
+        }
+      }
+    },
+    "EkycSignPdfReq": {
+      "type": "object",
+      "properties": {
+        "sign_key": {
+          "type": "string"
+        },
+        "sign_pass": {
+          "type": "string"
+        },
+        "pdf_file": {
+          "type": "string"
+        }
+      }
+    },
+    "EkycUserRegistrationReq": {
+      "type": "object",
+      "required": [
+        "verification_success"
+      ],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "company_name": {
+          "type": "string"
+        },
+        "position": {
+          "type": "string"
+        },
+        "id_card_num": {
+          "type": "string"
+        },
+        "signature_pic": {
+          "type": "string"
+        },
+        "nik_pic": {
+          "type": "string"
+        },
+        "id_card_pic": {
+          "type": "string"
+        },
+        "ekyc_pdf": {
+          "type": "string"
+        },
+        "verification_success": {
+          "type": "boolean"
+        },
+        "registration_id": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "tilakey": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "nik": {
+          "type": "string"
+        },
+        "phone": {
+          "type": "string"
+        }
+      }
+    },
+    "EkycCertificateResultReq": {
+      "type": "object",
+      "required": [
+        "verification_success"
+      ],
+      "properties": {
+        "ekyc_pdf": {
+          "type": "string"
+        },
+        "verification_success": {
+          "type": "boolean"
+        },
+        "issue_id": {
+          "type": "string"
+        }
+      }
+    },
+    "EkycRevokeCertReq": {
+      "type": "object",
+      "properties": {
+        "tilakey": {
+          "type": "string"
+        },
+        "totp": {
+          "type": "string"
+        },
+        "revoke_id": {
+          "type": "string"
+        }
+      }
+    },
+    "EkycFailedReq": {
+      "type": "object",
+      "properties": {
+        "registration_id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "TilakaB2BCheckEmailReq": {
+      "type": "object",
+      "properties": {
+        "emailDest": {
+          "type": "string"
+        }
+      }
+    },
+    "TilakaB2BNotifUpdateReq": {
+      "type": "object",
+      "properties": {
+        "notificationId": {
+          "type": "string"
+        }
+      }
+    },
+    "TilakaIntegrateAddUser": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        }
+      }
+    },
+    "ConfirmCertificateReq": {
+      "type": "object",
+      "properties": {
+        "serial_number": {
+          "type": "string"
+        }
+      }
+    },
+    "TilakaIntegrateSetDefaultSignature": {
+      "type": "object",
+      "required": [
+        "signature_type"
+      ],
+      "properties": {
+        "signature_image": {
+          "type": "string"
+        },
+        "signature_type": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "font_type": {
+          "type": "string"
+        }
+      }
+    },
+    "TilakaIntegrateSetDefaultMfa": {
+      "type": "object",
+      "properties": {
+        "mfa_type": {
+          "type": "string"
+        }
+      }
+    },
+    "TilakaB2BSigningPdfWflow": {
+      "type": "object",
+      "required": [
+        "coordinate_x",
+        "coordinate_y",
+        "height",
+        "page_number",
+        "width"
+      ],
+      "properties": {
+        "file_name": {
+          "type": "string"
+        },
+        "ip_address": {
+          "type": "string"
+        },
+        "content_pdf": {
+          "type": "string"
+        },
+        "otp_pin": {
+          "type": "string"
+        },
+        "face_image": {
+          "type": "string"
+        },
+        "signature_image": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "coordinate_x": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "coordinate_y": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "page_number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "workflowId": {
+          "type": "string"
+        },
+        "workflowFontType": {
+          "type": "string"
+        },
+        "workflowDetail": {
+          "type": "string"
+        },
+        "qr_content": {
+          "type": "string"
+        },
+        "tilakey": {
+          "type": "string"
+        },
+        "workflowSignatureType": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "workflowShowQrcodeLogo": {
+          "type": "boolean"
+        },
+        "showSignature": {
+          "type": "boolean"
+        },
+        "showQrCode": {
+          "type": "boolean"
+        },
+        "showName": {
+          "type": "boolean"
+        },
+        "width_ratio": {
+          "type": "number",
+          "format": "double"
+        }
+      }
+    },
+    "TilakaB2BSigningPdf": {
+      "type": "object",
+      "required": [
+        "content_pdf",
+        "coordinate_x",
+        "coordinate_y",
+        "file_name",
+        "height",
+        "ip_address",
+        "page_number",
+        "signature_image",
+        "width",
+        "width_ratio"
+      ],
+      "properties": {
+        "file_name": {
+          "type": "string"
+        },
+        "ip_address": {
+          "type": "string"
+        },
+        "otp_pin": {
+          "type": "string"
+        },
+        "content_pdf": {
+          "type": "string"
+        },
+        "face_image": {
+          "type": "string"
+        },
+        "signature_image": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "coordinate_x": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "coordinate_y": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "page_number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "width_ratio": {
+          "type": "number",
+          "format": "double"
+        },
+        "qr_content": {
+          "type": "string"
+        },
+        "tilakey": {
+          "type": "string"
+        }
+      }
+    },
+    "TilakaB2bShareDocReq": {
+      "type": "object",
+      "properties": {
+        "signing_id": {
+          "type": "string"
+        },
+        "file_name": {
+          "type": "string"
+        },
+        "dest_email": {
+          "type": "string"
+        },
+        "file_content_base64": {
+          "type": "string"
+        }
+      }
+    },
+    "TilakaIntegrateSignPdf": {
+      "type": "object",
+      "required": [
+        "api_id",
+        "coordinate_x",
+        "coordinate_y",
+        "height",
+        "page_number",
+        "trx_id",
+        "width"
+      ],
+      "properties": {
+        "file_name": {
+          "type": "string"
+        },
+        "ip_address": {
+          "type": "string"
+        },
+        "otp_pin": {
+          "type": "string"
+        },
+        "content_pdf": {
+          "type": "string"
+        },
+        "face_image": {
+          "type": "string"
+        },
+        "signature_image": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "coordinate_x": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "coordinate_y": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "page_number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "qr_content": {
+          "type": "string"
+        },
+        "tilakey": {
+          "type": "string"
+        },
+        "api_id": {
+          "type": "string"
+        },
+        "trx_id": {
+          "type": "string"
+        }
+      }
+    },
+    "TilakaIntegrateSigningPdfMultiple": {
+      "type": "object",
+      "required": [
+        "api_id",
+        "coordinate_x",
+        "coordinate_y",
+        "height",
+        "page_number",
+        "trx_id",
+        "width"
+      ],
+      "properties": {
+        "file_name": {
+          "type": "string"
+        },
+        "ip_address": {
+          "type": "string"
+        },
+        "content_pdf": {
+          "type": "string"
+        },
+        "otp_pin": {
+          "type": "string"
+        },
+        "face_image": {
+          "type": "string"
+        },
+        "signature_image": {
+          "type": "string"
+        },
+        "width": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "height": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "coordinate_x": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "coordinate_y": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "page_number": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "workflow_id": {
+          "type": "string"
+        },
+        "workflow_font_type": {
+          "type": "string"
+        },
+        "workflow_detail": {
+          "type": "string"
+        },
+        "qr_content": {
+          "type": "string"
+        },
+        "tilakey": {
+          "type": "string"
+        },
+        "workflow_signature_type": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "workflow_show_qrcode_logo": {
+          "type": "boolean"
+        },
+        "show_signature": {
+          "type": "boolean"
+        },
+        "show_qrcode": {
+          "type": "boolean"
+        },
+        "show_name": {
+          "type": "boolean"
+        },
+        "width_ratio": {
+          "type": "number",
+          "format": "double"
+        },
+        "api_id": {
+          "type": "string"
+        },
+        "trx_id": {
+          "type": "string"
+        }
+      }
+    },
+    "TilakaIntegrateCallback": {
+      "type": "object",
+      "required": [
+        "signing_type",
+        "trx_id"
+      ],
+      "properties": {
+        "content_pdf": {
+          "type": "string"
+        },
+        "trx_id": {
+          "type": "string"
+        },
+        "signing_type": {
+          "type": "string"
+        },
+        "workflow_id": {
+          "type": "string"
+        },
+        "sign_now": {
+          "type": "string"
+        },
+        "sign_next": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        }
+      }
+    },
+    "RegisterVerifyTotpReq": {
+      "type": "object",
+      "properties": {
+        "totpPin": {
+          "type": "string"
+        },
+        "totpKey": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
